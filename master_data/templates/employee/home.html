@@ -1,0 +1,38 @@
+{% extends 'base.html'%}
+
+{% block content %}
+
+<h1>Employees</h1>
+
+<div class="flex-row m-4 mt-6 rounded-lg w-6xl mx-auto">
+  <div class="p-6 space-y-6">
+
+    {% include 'employee/components/header/monitoring.html' %}
+
+    <div id="customer-results">
+      {% include 'employee/components/list/monitoring.html' %}
+    </div>
+
+  </div>
+
+  <div class="p-6 space-y-6">
+
+    {% include 'employee/components/header/representative.html' %}
+
+    <div id="customer-results">
+      {% include 'employee/components/list/representative.html' %}
+    </div>
+
+  </div>
+
+  <div class="p-6 space-y-6">
+
+    {% include 'employee/components/header/staff.html' %}
+
+    <div id="customer-results">
+      {% include 'employee/components/list/staff.html' %}
+    </div>
+
+  </div>
+</div>
+{% endblock content %}

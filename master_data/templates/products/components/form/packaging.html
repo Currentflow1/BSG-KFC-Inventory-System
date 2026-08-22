@@ -1,0 +1,43 @@
+<div class="space-y-4">
+
+  <div>
+    <label class="block mb-2 font-medium">
+      Product Name
+    </label>
+    {{ form.name }}
+    {{ form.name.errors }}
+  </div>
+
+  <div>
+    <label class="block mb-2 font-medium">
+      Category
+    </label>
+    {{ form.category }}
+    {{ form.category.errors }}
+  </div>
+
+  <div>
+    <label class="block mb-2 font-medium">
+      Supplier
+    </label>
+    {{ form.supplier }}
+    {{ form.supplier.errors }}
+  </div>
+
+  <div>
+    <label class="block mb-2 font-medium">
+      Low Stock Value
+    </label>
+    {{ form.low_stock_value }}
+    {{ form.low_stock_value.errors }}
+  </div>
+
+  <div>
+    <label class="block mb-2 font-medium">
+      Discontinued
+    </label>
+    {{ form.discontinued }}
+    {{ form.discontinued.errors }}
+  </div>
+
+</div>

@@ -43,6 +43,7 @@ INSTALLED_APPS = [
 
     'master_data',
     'operations',
+    'homepage',
 ]
 
 TAILWIND_APP_NAME = 'theme'

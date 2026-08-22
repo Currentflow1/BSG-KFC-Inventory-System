@@ -1,0 +1,65 @@
+<div class="max-h-[70vh] overflow-auto rounded-lg border border-gray-200">
+  <table class="min-w-full">
+    <thead class="sticky top-0 z-10 bg-gray-100">
+      <tr>
+        <th class="px-4 py-2 text-left">Name</th>
+        <th class="px-4 py-2 text-left">Category</th>
+        <th class="px-4 py-2 text-left">Supplier</th>
+        <th class="px-4 py-2 text-left">Discontinued</th>
+        <th class="px-4 py-2 text-left">Low Stock Value</th>
+        <th class="px-4 py-2 text-center">Actions</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      {% for product in packaging %}
+      <tr class="border-t hover:bg-gray-50">
+
+        <td class="px-4 py-2">
+          {{ product.name }}
+        </td>
+
+        <td class="px-4 py-2">
+          {{ product.category }}
+        </td>
+
+        <td class="px-4 py-2">
+          {{ product.supplier }}
+        </td>
+
+        <td class="px-4 py-2">
+          {{ product.discontinued }}
+        </td>
+        <td class="px-4 py-2">
+          {{ product.low_stock_value }}
+        </td>
+
+        <td class="px-4 py-2">
+          <div class="flex justify-center gap-2">
+
+            <a
+              href="{% url 'packaging_edit' product.id %}"
+              class="rounded bg-yellow-500 px-3 py-1 text-white hover:bg-yellow-600"
+            >
+              Edit
+            </a>
+
+            <a
+              href="{% url 'packaging_delete' product.id %}"
+              class="rounded bg-red-500 px-3 py-1 text-white hover:bg-red-600"
+            >
+              Delete
+            </a>
+          </div>
+        </td>
+      </tr>
+      {% empty %}
+      <tr>
+        <td colspan="6" class="px-4 py-6 text-center text-gray-500">
+          No raw materials found.
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>

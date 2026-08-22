@@ -16,13 +16,12 @@ class Supplier(models.Model):
 
     company_name = models.CharField(
         max_length=255,
-        default="N/A",
+        unique=True,
     )
 
     contact_person = models.CharField(
         max_length=255,
-        unique=True,
-        default="N/A",
+        unique=True
     )
 
     contact_title = models.CharField(

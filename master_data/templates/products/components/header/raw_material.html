@@ -1,0 +1,55 @@
+<div class="flex items-center justify-between">
+  <div class="space-y-6">
+    <div>
+      <h1 class="font-bold text-2xl">
+        Raw Materials
+      </h1>
+
+      <p class="text-gray-400">
+        Add Edit Delete Raw Materials
+      </p>
+
+    </div>
+
+    <div class="flex-col">
+      <a href="{% url 'raw_material_list' %}" class="rounded bg-blue-600 px-4 py-2 text-center text-white font-bold hover:bg-blue-700">
+        Raw Materials
+      </a>
+
+      <a href="{% url 'packaging_list' %}" class="rounded bg-blue-600/50 px-4 py-2 text-center text-white font-bold hover:bg-blue-700">
+        Packaging
+      </a>
+
+      <a href="{% url 'finished_product_list' %}" class="rounded bg-blue-600/50 px-4 py-2 text-center text-white font-bold hover:bg-blue-700">
+        Finished Products
+      </a>
+    </div>
+
+    <div class="flex items-center space-x-6">
+
+      <form method="get" action="{% url 'raw_material_list' %}" class="flex items-center space-x-6">
+        
+        <input
+          type="text"
+          name="search"
+          placeholder="Search Raw Material..."
+          autocomplete="off"
+          value="{{ request.GET.search|default:'' }}"
+
+          class="w-lg rounded-lg border border-gray-300 px-4 py-2 text-sm
+                outline-none
+                focus:border-blue-500
+                focus:ring-2
+                focus:ring-blue-200"
+        >
+        <button type="submit" class="rounded-lg bg-gray-800 px-4 py-2 text-sm text-white hover:bg-gray-900">
+          Search
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <a href="{% url 'raw_material_new' %}" class="rounded bg-blue-600 px-4 py-2 text-center text-white font-bold hover:bg-blue-700">
+    + New Raw Material
+  </a>
+</div>

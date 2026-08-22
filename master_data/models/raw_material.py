@@ -29,8 +29,8 @@ class RawMaterial(models.Model):
     supplier = models.ForeignKey(
         Supplier,
         on_delete=models.PROTECT,
-        to_field="contact_person",
-        db_column="supplier_contact",
+        to_field="company_name",
+        db_column="supplier_company_name",
         related_name="raw_materials",
     )
 
