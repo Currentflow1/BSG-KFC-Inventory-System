@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.urls import reverse
 
 def homepage(request):
     homepage_sections = [
@@ -11,17 +12,22 @@ def homepage(request):
                 {
                     "title": "Products",
                     "description": "Manage production items.",
-                    "href": "/raw_material",
+                    "href": reverse("raw_material_list"),
                 },
                 {
                     "title": "Suppliers",
                     "description": "Manage stock suppliers.",
-                    "href": "/supplier",
+                    "href": reverse("supplier_list"),
                 },
                 {
                     "title": "Employees",
                     "description": "Manage employee information.",
-                    "href": "/employees/",
+                    "href": reverse("employee_list"),
+                },
+                {
+                    "title": "Categories",
+                    "description": "Manage employee information.",
+                    "href": reverse("category_list"),
                 },
                 {
                     "title": "Admin",

@@ -12,7 +12,7 @@ class PackagingForm(forms.ModelForm):
       'name',
       'category',
       'supplier',
-      'low_stock_value'
+      'low_stock_value',
       'discontinued',
     ]
 
